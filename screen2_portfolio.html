@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Obsidian Ledger | Expert Stock Market Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#001e2b",
+              "on-secondary-container": "#00616d",
+              "inverse-on-surface": "#2f3035",
+              "on-primary-fixed": "#002117",
+              "surface-container": "#1e2024",
+              "on-tertiary-fixed-variant": "#294b5c",
+              "surface-bright": "#37393e",
+              "background": "#111318",
+              "tertiary": "#fffeff",
+              "on-tertiary": "#103444",
+              "on-primary-fixed-variant": "#00513e",
+              "inverse-surface": "#e2e2e8",
+              "on-secondary-fixed-variant": "#004f58",
+              "on-primary-container": "#007258",
+              "tertiary-container": "#c5e7fc",
+              "on-secondary-fixed": "#001f24",
+              "on-tertiary-container": "#48687a",
+              "surface-container-low": "#1a1c20",
+              "outline-variant": "#3a4a43",
+              "secondary-fixed": "#9cf0ff",
+              "primary": "#fcfffb",
+              "primary-container": "#00ffc8",
+              "secondary-container": "#00e3fd",
+              "surface-container-highest": "#333539",
+              "on-error-container": "#ffdad6",
+              "inverse-primary": "#006c53",
+              "surface-tint": "#00e0b0",
+              "surface": "#111318",
+              "error": "#ffb4ab",
+              "surface-container-high": "#282a2e",
+              "primary-fixed": "#2cffca",
+              "secondary-fixed-dim": "#00daf3",
+              "surface-variant": "#333539",
+              "surface-container-lowest": "#0c0e12",
+              "on-surface-variant": "#b9cbc1",
+              "on-error": "#690005",
+              "on-background": "#e2e2e8",
+              "error-container": "#93000a",
+              "primary-fixed-dim": "#00e0b0",
+              "tertiary-fixed-dim": "#a9cbe0",
+              "on-secondary": "#00363d",
+              "outline": "#83958c",
+              "on-primary": "#00382a",
+              "on-surface": "#e2e2e8",
+              "tertiary-fixed": "#c5e7fc",
+              "surface-dim": "#111318",
+              "secondary": "#bdf4ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(26, 28, 32, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .ambient-glow {
+        box-shadow: 0 0 40px 0 rgba(44, 255, 202, 0.08);
+      }
+      body {
+        background-color: #111318;
+        color: #e2e2e8;
+      }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#111318]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(44,255,202,0.05)] bg-gradient-to-b from-[#111318] to-transparent">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#00FFC8] font-headline uppercase" style="">
+                TD INvestment</div>
+<div class="hidden md:flex gap-8 items-center font-headline tracking-tight">
+<a class="text-[#00FFC8] font-bold border-b-2 border-[#00FFC8] pb-1 transition-all duration-300" href="#home" style="">Home</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#about" style="">About</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#services" style="">Services</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#portfolio" style="">Portfolio</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#contact" style="">Contact</a>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 font-bold hover:scale-95 duration-200 transition-all active:scale-95 shadow-[0_0_15px_rgba(44,255,202,0.3)]" style="">
+                Consult Now
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden" id="home">
+<!-- Ambient Glow Elements -->
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-fixed/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary-fixed-dim/5 rounded-full blur-[100px]"></div>
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant" style="">Live Trading Insights</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight leading-[1.1] text-white" style="">
+                        Expert Insights for a <span class="text-primary-fixed" style="">Secure Future</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed font-light" style="">
+                        10 Years of Excellence in Vietnam Stock Market. Master the complexity of the Vietnamese financial landscape with data-driven precision and architectural wealth strategy.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary-fixed text-on-primary-fixed px-10 py-4 font-bold text-lg hover:shadow-[0_0_25px_rgba(44,255,202,0.4)] transition-all" style="">
+                            Consult Now
+                        </button>
+<button class="border border-outline-variant/30 text-white px-10 py-4 font-bold text-lg hover:bg-surface-variant/30 transition-all" style="">
+                            View Performance
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary-fixed/10 rounded-2xl blur-3xl group-hover:bg-primary-fixed/20 transition-all duration-700"></div>
+<div class="relative bg-surface-container-low rounded-2xl p-4 border border-outline-variant/10">
+<img alt="Stock Market Expert Profile" class="rounded-xl w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Professional portrait of a mature male financial expert in a dark suit against a sleek, modern office background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSV_G8VW13GsutDYzOchfCjEOKE3aUbxJIwsVBYKKPZRgHIc08hTvLcqpjK-xbABkUdHcauVqv6lrGqHJO97fbqTUEW4TsW-GGLVCTtfopW1-rA8WDZLMIvKgntg7y2Gc6kERxAr7kxOxeLB_4rKEUa-hejunS-w9sz3RKH-3avYKyKWpvU0yxF2KkSsGQ89RcEBu_mThyGUWn0ciYGqKl2r-qxGAiN8wdejp5yY5tWX_Vm7D_GnepQY6rF8Ts-xC2cZjAP9QrMg" style=""/>
+<div class="absolute -bottom-6 -right-6 glass-card p-6 border border-outline-variant/20 ambient-glow hidden lg:block">
+<div class="text-3xl font-headline font-extrabold text-primary-fixed" style="">10+</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant" style="">Years Market Mastery</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-4">
+<div class="sticky top-32">
+<div class="w-12 h-[2px] bg-surface-tint mb-6"></div>
+<h2 class="text-3xl font-headline font-bold mb-4 uppercase tracking-tighter" style="">About Me</h2>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-[0.2em]" style="">The Digital Architect of Wealth</p>
+</div>
+</div>
+<div class="md:col-span-8 space-y-8 text-lg leading-relaxed text-on-surface/90">
+<p class="" style="">
+                            With over a decade navigating the volatile corridors of the Ho Chi Minh City and Hanoi Stock Exchanges, my approach transcends traditional brokerage. I treat the market as an obsidian ledger—a permanent record of psychology, supply, and demand that requires a calm, calculated lens to decipher.
+                        </p>
+<p class="" style="">
+                            My mission is to transform complex financial data into a streamlined "Digital Vault" for my clients. I focus on high-stakes mastery, moving away from short-term noise to build enduring legacies. In the Vietnam market, reliability is the ultimate currency, and I have spent ten years minting it through consistent outperformance.
+                        </p>
+<div class="grid grid-cols-2 gap-8 pt-8">
+<div class="space-y-2">
+<span class="text-primary-fixed text-4xl font-headline font-extrabold" style="">$250M+</span>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest" style="">AUM Managed</p>
+</div>
+<div class="space-y-2">
+<span class="text-primary-fixed text-4xl font-headline font-extrabold" style="">94%</span>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest" style="">Client Retention</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 text-center">
+<h2 class="text-4xl font-headline font-extrabold text-white mb-4" style="">Strategic Frameworks</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto" style="">Tailored solutions designed for the sophisticated investor in the Vietnamese emerging market.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="glass-card p-10 border border-outline-variant/10 group hover:border-primary-fixed/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" style="">trending_up</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-white mb-6" style="">Investment Consultation</h3>
+<p class="text-on-surface-variant mb-8 text-sm leading-relaxed" style="">Direct access to institutional-grade research and tactical asset allocation in the VN-Index ecosystem.</p>
+<ul class="space-y-3 mb-10 text-xs uppercase tracking-widest text-on-surface-variant">
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Sector Analysis</li>
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Risk Assessment</li>
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Tactical Rebalancing</li>
+</ul>
+<a class="text-primary-fixed text-sm font-bold uppercase tracking-widest flex items-center gap-2" href="#" style="">Explore <span class="material-symbols-outlined text-sm" style="">arrow_forward</span></a>
+</div>
+<!-- Service Card 2 -->
+<div class="glass-card p-10 border border-outline-variant/10 group hover:border-primary-fixed/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" style="">account_balance_wallet</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-white mb-6" style="">Wealth Management</h3>
+<p class="text-on-surface-variant mb-8 text-sm leading-relaxed" style="">Bespoke portfolio structuring focused on long-term capital preservation and generational growth.</p>
+<ul class="space-y-3 mb-10 text-xs uppercase tracking-widest text-on-surface-variant">
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Family Office Setup</li>
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Estate Planning</li>
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Tax Optimization</li>
+</ul>
+<a class="text-primary-fixed text-sm font-bold uppercase tracking-widest flex items-center gap-2" href="#" style="">Explore <span class="material-symbols-outlined text-sm" style="">arrow_forward</span></a>
+</div>
+<!-- Service Card 3 -->
+<div class="glass-card p-10 border border-outline-variant/10 group hover:border-primary-fixed/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" style="">school</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-white mb-6" style="">Training &amp; Coaching</h3>
+<p class="text-on-surface-variant mb-8 text-sm leading-relaxed" style="">Executive-level mentorship for high-net-worth individuals seeking to master market mechanics.</p>
+<ul class="space-y-3 mb-10 text-xs uppercase tracking-widest text-on-surface-variant">
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>One-on-One Sessions</li>
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Technical Mastery</li>
+<li class="flex items-center gap-2" style=""><span class="w-1 h-1 bg-primary-fixed"></span>Psychology of Trading</li>
+</ul>
+<a class="text-primary-fixed text-sm font-bold uppercase tracking-widest flex items-center gap-2" href="#" style="">Explore <span class="material-symbols-outlined text-sm" style="">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="portfolio">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-xl">
+<h2 class="text-4xl font-headline font-extrabold text-white mb-4 uppercase tracking-tighter" style="">Market Performance</h2>
+<p class="text-on-surface-variant" style="">Visualizing a decade of consistent market leadership and institutional-grade results.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-end">
+<span class="text-2xl font-headline font-bold text-primary-fixed" style="">+28.4%</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant" style="">Annualized Return</span>
+</div>
+<div class="w-[1px] h-10 bg-outline-variant/30"></div>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-headline font-bold text-white" style="">420+</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant" style="">Key Projects</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 glass-card border border-outline-variant/10 p-8 flex flex-col justify-between">
+<div>
+<span class="label-md uppercase tracking-widest text-primary-fixed block mb-4" style="">Historical Alpha</span>
+<h4 class="text-2xl font-headline font-bold text-white" style="">VN-Index Outperformance</h4>
+</div>
+<div class="flex-grow flex items-end pt-12">
+<div class="w-full h-full flex flex-col pt-8">
+<div class="flex-grow relative">
+<!-- Y-Axis Labels -->
+<div class="absolute left-0 h-full flex flex-col justify-between text-[10px] uppercase tracking-tighter text-on-surface-variant/60 pr-4">
+<span>300M</span>
+<span>225M</span>
+<span>150M</span>
+<span>75M</span>
+<span>0</span>
+</div>
+<div class="ml-12 h-full relative">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between opacity-10">
+<div class="border-t border-white"></div>
+<div class="border-t border-white"></div>
+<div class="border-t border-white"></div>
+<div class="border-t border-white"></div>
+<div class="border-t border-white"></div>
+</div>
+<!-- SVG Chart -->
+<svg class="w-full h-full overflow-visible" viewbox="0 0 400 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00FFC8" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#00FFC8" stop-opacity="0"></stop>
+</lineargradient>
+<filter id="glow">
+<fegaussianblur result="coloredBlur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Gradient Area -->
+<path d="M0,180 L40,170 L80,140 L120,150 L160,110 L200,90 L240,100 L280,60 L320,40 L360,25 L400,10 V200 H0 Z" fill="url(#chartGradient)"></path>
+<!-- Growth Line -->
+<path d="M0,180 L40,170 L80,140 L120,150 L160,110 L200,90 L240,100 L280,60 L320,40 L360,25 L400,10" fill="none" filter="url(#glow)" stroke="#00FFC8" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Current Point -->
+<circle class="animate-pulse" cx="400" cy="10" fill="#00FFC8" r="4"></circle>
+</svg>
+</div>
+</div>
+<!-- X-Axis Labels (Years) -->
+<div class="flex justify-between ml-12 mt-4 text-[10px] uppercase tracking-widest text-on-surface-variant/80">
+<span>2014</span>
+<span>2016</span>
+<span>2018</span>
+<span>2020</span>
+<span>2022</span>
+<span>2024</span>
+</div>
+<div class="mt-4 flex justify-center">
+<span class="text-[9px] uppercase tracking-[0.3em] text-on-surface-variant font-bold">Portfolio Growth Analysis (M USD)</span>
+</div>
+</div></div>
+</div>
+<div class="md:col-span-2 glass-card border border-outline-variant/10 p-8 flex justify-between items-center">
+<div class="space-y-2">
+<h4 class="text-white font-headline font-bold" style="">Banking Sector Rally</h4>
+<p class="text-sm text-on-surface-variant" style="">Strategic exit at cycle peak, preserving 45% unrealized gains.</p>
+</div>
+<span class="material-symbols-outlined text-primary-fixed text-3xl" style="">insights</span>
+</div>
+<div class="glass-card border border-outline-variant/10 p-8 group">
+<div class="text-on-surface-variant text-xs uppercase tracking-widest mb-4" style="">Success Story</div>
+<div class="text-white font-bold" style="">Real Estate Pivot 2021</div>
+<div class="mt-4 text-primary-fixed font-headline text-lg group-hover:translate-x-2 transition-transform" style="">→</div>
+</div>
+<div class="glass-card border border-outline-variant/10 p-8 group">
+<div class="text-on-surface-variant text-xs uppercase tracking-widest mb-4" style="">Energy Tech</div>
+<div class="text-white font-bold" style="">ESG Portfolio Launch</div>
+<div class="mt-4 text-primary-fixed font-headline text-lg group-hover:translate-x-2 transition-transform" style="">→</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20">
+<div class="space-y-8">
+<h2 class="text-5xl font-headline font-extrabold text-white" style="">Secure Your <br/><span class="text-primary-fixed" style="">Strategic Counsel</span></h2>
+<p class="text-on-surface-variant leading-relaxed" style="">Expert consultation is the first step toward institutional-grade wealth. Reach out to schedule a private financial audit.</p>
+<div class="space-y-6 pt-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed" style="">mail</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant" style="">Email</p>
+<p class="text-white font-bold" style="">mastery@obsidianledger.vn</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed" style="">public</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant" style="">Social</p>
+<p class="text-white font-bold" style="">linkedin.com/in/obsidianledger</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-10 border border-outline-variant/15 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary-fixed/30"></div>
+<form action="#" class="space-y-6">
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold" style="">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-1 focus:ring-primary-fixed p-4 text-white placeholder:text-gray-600 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold" style="">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-1 focus:ring-primary-fixed p-4 text-white placeholder:text-gray-600 transition-all" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold" style="">Consultation Interest</label>
+<select class="w-full bg-surface-container-highest border-none focus:ring-1 focus:ring-primary-fixed p-4 text-white transition-all appearance-none">
+<option>Investment Consultation</option>
+<option>Wealth Management</option>
+<option>Coaching</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold" style="">Message</label>
+<textarea class="w-full bg-surface-container-highest border-none focus:ring-1 focus:ring-primary-fixed p-4 text-white placeholder:text-gray-600 transition-all" placeholder="How can I assist your financial journey?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-4 hover:shadow-[0_0_20px_rgba(44,255,202,0.3)] transition-all uppercase tracking-widest" style="">Send Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#111318] w-full py-12 border-t border-[#3a4a43]/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-black text-[#00FFC8] font-headline uppercase tracking-tighter" style="">
+                Obsidian Ledger
+            </div>
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest text-gray-500 text-center md:text-left" style="">
+                © 2024 Obsidian Ledger. High-Stakes Financial Mastery.
+            </div>
+<div class="flex gap-8 font-['Inter'] text-sm uppercase tracking-widest">
+<a class="text-gray-500 hover:text-[#00FFC8] transition-colors" href="#" style="">Terms of Service</a>
+<a class="text-gray-500 hover:text-[#00FFC8] transition-colors" href="#" style="">Privacy Policy</a>
+<a class="text-gray-500 hover:text-[#00FFC8] transition-colors" href="#" style="">Risk Disclosure</a>
+</div>
+</div>
+</footer>
+</body></html>
