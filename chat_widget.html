@@ -1,0 +1,80 @@
+<!-- Floating AI Chat Widget -->
+<div id="ai-chat-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-family: 'Inter', sans-serif;">
+  <div id="chat-window" style="display: none; width: 340px; height: 480px; background: #111318; border: 1px solid #3a4a43; border-radius: 12px; box-shadow: 0 4px 40px rgba(44, 255, 202, 0.1); flex-direction: column; overflow: hidden; margin-bottom: 12px;">
+    <div style="background: #1a1c20; padding: 12px 16px; border-bottom: 1px solid #3a4a43; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleChat()">
+      <span style="color: #00FFC8; font-weight: 600; font-family: 'Manrope', sans-serif;">AI Analyst Assistant</span>
+      <span style="color: #e2e2e8; font-size: 20px;">&times;</span>
+    </div>
+    <div id="chat-messages" style="flex: 1; padding: 12px; overflow-y: auto; color: #e2e2e8; font-size: 14px; display: flex; flex-direction: column; gap: 8px;">
+      <div style="background: #282a2e; padding: 8px 12px; border-radius: 8px; max-width: 85%; align-self: flex-start; line-height: 1.5;">
+        Xin chào! Mình là Tư duy Phân tích AI. Mình đã sẵn sàng hỗ trợ bạn duyệt danh mục hoặc nhận định thị trường. Bạn cần hỏi gì nào?
+      </div>
+    </div>
+    <div style="padding: 10px; border-top: 1px solid #3a4a43; display: flex; gap: 8px; background: #1a1c20;">
+      <input type="text" id="chatInput" placeholder="Nhập câu hỏi..." style="flex: 1; padding: 8px 12px; background: #282a2e; border: 1px solid #3a4a43; border-radius: 6px; color: currentcolor; outline: none; font-size: 14px;" onkeypress="if(event.key === 'Enter') sendChat()" />
+      <button onclick="sendChat()" style="background: #00e0b0; color: #002117; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-family: 'Inter', sans-serif;">Gửi</button>
+    </div>
+  </div>
+  <button id="chat-toggle-btn" onclick="toggleChat()" style="background: #00FFC8; color: #002117; border: none; width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 0 20px rgba(0, 255, 200, 0.4); cursor: pointer; display: flex; justify-content: center; align-items: center; float: right; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </button>
+</div>
+
+<script>
+function toggleChat() {
+  const chatWindow = document.getElementById('chat-window');
+  chatWindow.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
+}
+
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  if (!message) return;
+  
+  const messagesDiv = document.getElementById('chat-messages');
+  
+  const userBubble = document.createElement('div');
+  userBubble.style.cssText = 'background: #00513e; color: #e2e2e8; padding: 8px 12px; border-radius: 8px; max-width: 85%; align-self: flex-end; line-height: 1.5;';
+  userBubble.textContent = message;
+  messagesDiv.appendChild(userBubble);
+  
+  input.value = '';
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+  const loadingBubble = document.createElement('div');
+  loadingBubble.style.cssText = 'background: #282a2e; color: #83958c; padding: 8px 12px; border-radius: 8px; max-width: 85%; align-self: flex-start;';
+  loadingBubble.textContent = "AI đang suy nghĩ...";
+  messagesDiv.appendChild(loadingBubble);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userMessage: message })
+    });
+    
+    const data = await res.json();
+    messagesDiv.removeChild(loadingBubble);
+
+    const botBubble = document.createElement('div');
+    botBubble.style.cssText = 'background: #282a2e; color: #e2e2e8; padding: 8px 12px; border-radius: 8px; max-width: 85%; align-self: flex-start; line-height: 1.5; white-space: pre-wrap;';
+    
+    if (data.reply) {
+      botBubble.textContent = data.reply;
+    } else {
+      botBubble.textContent = "Lỗi phản hồi: " + data.error;
+    }
+    messagesDiv.appendChild(botBubble);
+    
+  } catch (error) {
+    messagesDiv.removeChild(loadingBubble);
+    const errBubble = document.createElement('div');
+    errBubble.style.cssText = 'background: #93000a; color: #ffdad6; padding: 8px 12px; border-radius: 8px; max-width: 85%; align-self: flex-start;';
+    errBubble.textContent = "Lỗi mạng hoặc server chậm.";
+    messagesDiv.appendChild(errBubble);
+  }
+  
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+</script>
